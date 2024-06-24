@@ -4,8 +4,6 @@ from typing import List, Union, Optional
 # cpp extension (named in setup.py and PYBIND11_MODULE)
 import _cpe
 
-import kiui
-
 class CPETokenizer:
     def __init__(self, num_basic_tokens, vocab_size, verbose=False):
         self.num_basic_tokens = num_basic_tokens

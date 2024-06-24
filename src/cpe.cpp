@@ -157,6 +157,7 @@ public:
                     max_count = it->second;
                 }
             }
+
             // add a new token (O1)
             int new_token = num_basic_tokens + i;
             merges[p] = new_token;
@@ -170,7 +171,6 @@ public:
             for (int j = 0; j < dataset.size(); j++) {
                 merge(dataset[j], p, new_token, counter);
             }
-
         }
     }
 
