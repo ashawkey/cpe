@@ -1,6 +1,7 @@
 # Coordinate Pair Encoding Tokenizer
 
 CPE Tokenizer for compressing mesh coordinate sequence.
+
 The core functions are implemented in c++ and binded to python.
 
 ### Install
@@ -45,3 +46,14 @@ tokenizer.save(f'cpe.model')
 tokenizer2 = CPETokenizer(num_basic_tokens, vocab_size, verbose)
 tokenizer2.load(f'cpe.model')
 ```
+
+An example can be found in [test.py](tests/test.py), where we also compare the speed with a pure-python implementation:
+```bash
+# train on 1000 sequences with max length of 1000, vocab size 1024
+[INFO] python implementation took 124.384 seconds
+[INFO] cpp implementation took 1.164 seconds
+```
+
+### Note
+* We use linked list to make token merging and counting faster, but it's not data-paralleled for now.
+* We load all data into memory, which could require very high memory for large dataset.
