@@ -12,4 +12,5 @@ setup(
         ),
     ],
     cmdclass={"build_ext": build_ext},
+    install_requires=["numpy", "pybind11"],
 )
