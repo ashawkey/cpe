@@ -2,7 +2,7 @@
 
 CPE Tokenizer for compressing mesh coordinate sequence.
 
-The core functions are implemented in c++ and binded to python.
+The core functions are implemented in c++ and binded to python. It's also an example for a minimal (single-file) c++ & python project.
 
 ### Install
 
