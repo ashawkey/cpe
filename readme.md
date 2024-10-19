@@ -1,6 +1,6 @@
-# Coordinate Pair Encoding Tokenizer
+# Pair Encoding Tokenizer
 
-CPE Tokenizer for compressing mesh coordinate sequence.
+A toy implementation of pair encoding tokenizer as used in LLMs.
 
 The core functions are implemented in c++ and binded to python. It's also an example for a minimal (single-file) c++ & python project.
 
